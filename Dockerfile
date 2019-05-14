@@ -18,6 +18,7 @@ RUN apt-get update && \
         bc \
         unzip \
         wget \
+        git \
         ca-certificates && \
     update-ca-certificates && \
     apt-get install -y openssl && \
@@ -32,9 +33,9 @@ RUN apt-get update && \
         curl -o /tmp/s6-overlay.tar.gz -L "https://github.com/just-containers/s6-overlay/releases/download/${OVERLAY_VERSION}/s6-overlay-amd64.tar.gz" && \
         tar xfz  /tmp/s6-overlay.tar.gz -C /
 
-    RUN \    
-        sudo git clone https://github.com/l3uddz/cloudplow /opt/cloudplow \
-        sudo chown -R abc:abc /opt/cloudplow \
+    RUN \
+        git clone https://github.com/l3uddz/cloudplow /opt/cloudplow \
+        chown -R abc:abc /opt/cloudplow \
         cd /opt/cloudplow
 
     RUN apt-get update && \
