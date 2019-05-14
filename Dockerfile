@@ -5,7 +5,6 @@ FROM ubuntu:16.04
 
 MAINTAINER prc2k10@googlemail.com <prc2k10@googlemail.com>
 
-
 ####################
 # INSTALLATIONS
 ####################
@@ -39,10 +38,13 @@ RUN apt-get update && \
     RUN \
         cd /opt/cloudplow
 
-    RUN apt-get update && \
+    RUN \
+        apt-get update && \
         apt-get install -y python3 \
         python3-pip
 
-    RUN python3 -m pip install -r requirements.txt
+    RUN \
+        python3 -m pip install -r /opt/cloudplow/requirements.txt
 
-    RUN ln -s /opt/cloudplow/cloudplow.py /usr/local/bin/cloudplow
+    RUN \
+        ln -s /opt/cloudplow/cloudplow.py /usr/local/bin/cloudplow
