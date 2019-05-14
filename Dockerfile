@@ -34,8 +34,8 @@ RUN apt-get update && \
         tar xfz  /tmp/s6-overlay.tar.gz -C /
 
     RUN \
-        git clone https://github.com/l3uddz/cloudplow /opt/cloudplow \
-        chown -R abc:abc /opt/cloudplow \
+        git clone https://github.com/l3uddz/cloudplow /opt/cloudplow && \
+        chown -R abc:abc /opt/cloudplow && \
         cd /opt/cloudplow
 
     RUN apt-get update && \
