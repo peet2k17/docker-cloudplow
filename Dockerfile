@@ -35,7 +35,6 @@ RUN apt-get update && \
 
     RUN \
         git clone https://github.com/l3uddz/cloudplow /opt/cloudplow && \
-        chown -R abc:abc /opt/cloudplow && \
         cd /opt/cloudplow
 
     RUN apt-get update && \
