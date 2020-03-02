@@ -1,7 +1,7 @@
 ####################
 # BASE IMAGE
 ####################
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 MAINTAINER prc2k10@googlemail.com <prc2k10@googlemail.com>
 
