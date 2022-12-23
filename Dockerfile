@@ -20,6 +20,7 @@ RUN apt-get update && \
         wget \
         git \
         lsof \
+		xz-utils \
         ca-certificates && \
     update-ca-certificates && \
     apt-get install -y openssl && \
